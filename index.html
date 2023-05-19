@@ -9,23 +9,18 @@
     <script defer src="./js/script.js"></script>    
 </head>
 <body>
-    <!-- <form action="" method="post">
-        <input id="name" type="text" value="">
-        <input id="km" type="text" value="">
-        <button id="button">GENERA</button>
-
-    </form> -->
+    <!-- CONTAINER TITLE -->
     <div class="container">
         <div class="row">
             <div class="col-100">
                 <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             </div>
         </div>
-
-
     </div>
+    <!-- CONTAINER FORM -->
     <div class="container-form">
         <div class="row-form">
+            <!-- INPUT -->
             <div class="col-33">
                 <p>Nome e Cognome</p>
                 <input class="input" placeholder="Inserisci nome" id="name_utente" type="text" value="">
@@ -39,12 +34,13 @@
             <div class="col-33">
                 <p>Fascia d'età</p>
                 <select name="age" id="age">
-                    <option id="Maggiorenne" value="1">Minorenne</option>
+                    <option value="1">Minorenne</option>
                     <option value="2">Over-65</option>
                     <option value="3">Maggiorenne</option>
                 </select>
 
             </div>
+            <!-- BUTTON -->
             <div class="col-33">
                 <button id="button">GENERA</button>
                 <button id="button_anulla" >ANNULLA</button>
@@ -59,13 +55,14 @@
             </div>
         </div>
     </div>
+    <!-- CONTAINER TICKET -->
     <div class="container-form">
         <div class="row-ticket">
             <div class="col-30">
             
                 <div class="content">
                     <h2>NOME PASSEGGERO</h2>
-                    <div id="name"></div>
+                    <h4 id="name"></h4>
                 </div>
                 
             </div>
@@ -73,7 +70,7 @@
                 <div class="col-25">
                     <div class="content">
                         <h4>Offerta</h4>
-                        <p>Biglietto Standard</p>
+                        <p id="ticket_type"></p>
                     </div>
                 </div>
                 <div class="col-25">
@@ -97,6 +94,6 @@
             </div>    
         </div>    
     </div>
-    
+    <!-- FINE -->
 </body>
 </html>

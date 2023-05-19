@@ -10,15 +10,15 @@ button.addEventListener('click', function(){
     
     // VARIABILE KM
     let km = parseInt(document.getElementById("km").value)
-    console.log(km)
+
 
     // VARIABILE AGE
     let age = parseInt(document.getElementById("age").value)
-    console.log(age)
+
     
     // VARIABILE TARIFFA
     let tariffa = (km * 0.21).toFixed(2)
-    console.log(tariffa)
+
     document.getElementById("costo_biglietto").innerHTML = tariffa+('€')
 
     // VARIABILE CARROZZA
@@ -29,20 +29,36 @@ button.addEventListener('click', function(){
     let codice_cp = (Math.random() * 10 + 1).toFixed(3); 
     document.getElementById("codice_cp").innerHTML = codice_cp
 
+    
+
+    // PRIMA CONDIZIONE 
     if (age === 1) {
         tariffa = (tariffa * 0.8 ).toFixed(2)
-        console.log(tariffa)
+
         document.getElementById("costo_biglietto").innerHTML = tariffa+('€')
-        
+
+        let ticket_type = ('')
+        document.getElementById("ticket_type").innerText = ('Biglietto per minori')
+
+
+
+    // SECONDA CONDIZIONE    
     } else if (age === 2) {
 
         tariffa = (tariffa * 0.6 ).toFixed(2)
-        console.log(tariffa)
+
         document.getElementById("costo_biglietto").innerHTML = tariffa+('€')
 
-        
+        let ticket_type = ('')
+        document.getElementById("ticket_type").innerText = ('Biglietto per over-65')
+
+
+    // TERZA CONDIZIONE   
     }else if (age === 3) {
-        console.log(tariffa)
+
+        let ticket_type = ('')
+        document.getElementById("ticket_type").innerText = ('Biglietto del Standard')
+
 
         
         
@@ -50,6 +66,38 @@ button.addEventListener('click', function(){
 
 
     
+})
+
+
+let button_reset = document.getElementById("button_anulla")
+
+button_reset.addEventListener('click', function(){
+
+    //VARIABILE NAME
+    document.getElementById("name").innerHTML = ''
+   
+    // VARIABILE AGE
+    let age = parseInt(document.getElementById("age").value)
+    
+    // VARIABILE TARIFFA
+    document.getElementById("costo_biglietto").innerHTML = ''
+
+    // VARIABILE CARROZZA
+ 
+    document.getElementById("carrozza").innerHTML = ''
+
+    // VARIABILE CODICE CP
+ 
+    document.getElementById("codice_cp").innerHTML = ''
+
+    // TIPO DI BIGLIETTO
+    document.getElementById("ticket_type").innerText = ''
+
+
+
+    
+
+
 })
 
 
